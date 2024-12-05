@@ -13,6 +13,7 @@ class AlienInvasion:
 
         self.screen = pygame.display.set_mode((1200, 800))
         pygame.display.set_caption("Inwazja obcych")
+        self.bg_color = (230, 230, 230)
 
     def run_game(self):
         """pętla główna"""
@@ -22,8 +23,10 @@ class AlienInvasion:
                 if event.type == pygame.QUIT:
                     sys.exit()
 
-                pygame.display.flip()
-                self.clock.tick(60)
+            self.screen.fill(self.bg_color)
+
+            pygame.display.flip()
+            self.clock.tick(60)
 
 
 if __name__ == '__main__':
